@@ -6,7 +6,7 @@ class team
 private:
 
     char team_name;
-    double *resources = STARTING_RESOURCES;
+    double resources[5];
     std::vector<robot> robots;
 
 public:
@@ -14,5 +14,8 @@ public:
     team(char name)
     {
         team_name = name;
+        memcpy(resources, STARTING_RESOURCES, sizeof(STARTING_RESOURCES));
     }
 };
+
+team TeamA('A'), TeamB('B');
