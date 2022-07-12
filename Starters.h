@@ -1,4 +1,6 @@
-#include <vector>
+#include <random>
+#include <cstring>
+#include <ctime>
 
 int BASE_A[2] = {10,10}, BASE_B[2] = {10,10};
 double STARTING_RESOURCES[5] = {0,0,0,0,0};

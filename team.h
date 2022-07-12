@@ -1,21 +1,16 @@
-#include "robot.h"
+class robot;
+#include <vector>
 
 //will also contain any base code.
 class team
 {
-private:
-
-    char team_name;
-    double resources[5];
-    std::vector<robot> robots;
-
 public:
 
-    team(char name)
-    {
-        team_name = name;
-        memcpy(resources, STARTING_RESOURCES, sizeof(STARTING_RESOURCES));
-    }
-};
+    std::vector<robot> robots;
+    double resources[5];
+    char team_name;
 
-team TeamA('A'), TeamB('B');
+    team(char name);
+
+    void mkRobot(short n);
+};
